@@ -10,7 +10,7 @@ Find the sum of all the multiples of 3 or 5 below 1000.
 
 */
 
-var problemOne = function(number) {
+function problemOne(number) {
   var sum = 0;
   for (var i = 0; i < number; i++) {
     if (i % 3 === 0 || i % 5 === 0) {
@@ -37,18 +37,18 @@ By considering the terms in the Fibonacci sequence whose values do not exceed fo
 */
 
 
-var problemTwo = function(value) {          // THIS IS NOT A PERFECT SOLUTION!!!!
+function problemTwo(value) {                 // THIS IS NOT A PERFECT SOLUTION!!!!
   var sum = 0;
   var x = 0;
   var y = 1;
   
   for (z = 1; z <= value; z++) {            // z++ is not accurate, shouldn't sum z one by one   
     z = x + y;
-    x = y;
-    y = z;
-    if (z % 2 === 0) {
-      sum += z; 
-  }
+x = y;
+y = z;
+if (z % 2 === 0) {
+  sum += z; 
+}
 }
 console.log("Sum of the even-valued terms in the Fibonacci sequence that does not exceed four million is: " + sum);
 };
@@ -59,7 +59,7 @@ problemTwo(4000000);
 // second, much more accurate solution:
 
 
-var problemTwoPointOne = function(value) {
+function problemTwoPointOne(value) {
   var x = 0;
   var y = 1;
   var z = 1;
