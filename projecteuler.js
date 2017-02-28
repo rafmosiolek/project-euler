@@ -20,8 +20,8 @@ function problemOne(number) {
 console.log("Sum of all the natural numbers below " + number + " that are multiples of 3 or 5 is: " + sum);
 }
 
-problemOne(10);
-problemOne(1000);
+problemOne(10); // Output: Sum of all the natural numbers below 10 that are multiples of 3 or 5 is: 23
+problemOne(1000); // Output: Sum of all the natural numbers below 1000 that are multiples of 3 or 5 is: 233168
 
 
 /*
@@ -53,7 +53,7 @@ if (z % 2 === 0) {
 console.log("Sum of the even-valued terms in the Fibonacci sequence that does not exceed four million is: " + sum);
 };
 
-problemTwo(4000000);
+problemTwo(4000000); // Output: Sum of the even-valued terms in the Fibonacci sequence that does not exceed four million is: 4613732 (CORRECT ANSWER, WRONG METHOD!)
 
 
 // second, much more accurate solution:
@@ -77,7 +77,33 @@ function problemTwoPointOne(value) {
 console.log("Sum of the even-valued terms in the Fibonacci sequence that does not exceed four million is: " + sum);
 };
 
-problemTwoPointOne(4000000);
+problemTwoPointOne(4000000); // Output: Sum of the even-valued terms in the Fibonacci sequence that does not exceed four million is: 4613732
+
+
+/*
+
+Problem 3.
+
+The prime factors of 13195 are 5, 7, 13 and 29.
+
+What is the largest prime factor of the number 600851475143 ?
+
+*/
+
+
+function problemThree(value) {
+  var i = 2;
+  while (i * i <= value) {
+    while (value % i === 0) {
+        value = (value / i);
+    }
+    i += 1;
+  }
+  console.log("The largest prime factor of this number is: " + value); 
+}
+
+problemThree(13195); // Output: The largest prime factor of this number is: 29
+problemThree(600851475143); // Output: The largest prime factor of this number is: 6857
 
 
 
