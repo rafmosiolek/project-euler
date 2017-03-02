@@ -119,7 +119,7 @@ Find the largest palindrome made from the product of two 3-digit numbers.
 
 
 function problemFour() {
-  
+
   var reversedString = function(value) {            // function that reverse a string with joint build-in functions: split(), reverse() and join().
     return value.split("").reverse().join("")
 };
@@ -128,7 +128,7 @@ var arr = [];
 
 for (x = 100; x <= 999; x++) {
     for (y = 100; y <=999; y++) {
-      
+
       var i = x * y;
       var string = i.toString();                    // .toString() - build-in function that change any object into a string
       if (string === reversedString(string)) {
@@ -140,4 +140,39 @@ for (x = 100; x <= 999; x++) {
 }
 
 problemFour(); // Output: 906609.
+
+
+
+/*
+
+Problem 5.
+
+Smallest multiple
+
+2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
+
+What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
+
+*/
+
+function problemFive(value) {
+  
+  var counter = 1;
+  var match = false;
+  
+  while (match = false) {
+    for (i = 1; i <= value; i++) {
+      if (counter % value !== 0) {
+        break;
+      }
+      if (i === value) {
+        match = true;
+        document.write(counter);
+      }
+    }
+    counter++;
+  }
+}
+ 
+problemFive(20);
 
